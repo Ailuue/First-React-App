@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './Business.css';
+import '../BusinessList/BusinessList.css';
 
-
+/*
+Component receiving data from BusinessList in order to create each business image and info
+*/
 
 export default class Business extends React.Component {
   render() {
@@ -17,6 +19,7 @@ export default class Business extends React.Component {
      				<p>{this.props.business.address}</p>
      			 	<p>{this.props.business.city}</p>
       				<p>{this.props.business.state} {this.props.business.zipCode}</p>
+              <p style={{color:'red'}}>{this.props.business.distance} KM away</p>
     			</div>
     			<div className="Business-reviews">
       				<h3>{this.props.business.category}</h3>

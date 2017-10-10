@@ -1,3 +1,9 @@
+.Business img{
+ width: 100%;
+ max-height: 100%;
+  
+}
+
 .Business {
   display: flex;
   flex-direction: column;
