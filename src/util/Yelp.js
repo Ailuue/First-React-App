@@ -16,8 +16,8 @@ let Yelp = {
 			{ method: 'POST' })
 			.then(response => response.json())
 			.then(jsonResponse => {
-				accessToken = jsonResponse.access_Token
-		});
+				accessToken = jsonResponse.access_token});
+		
 	},
 	search: function (term, location, sortBy) {
 		return Yelp.getAccessToken()
@@ -37,12 +37,13 @@ let Yelp = {
 								id: business.id,
 								imageSrc: business.image_url,
 								name: business.name,
-								address: business.address,
-								city: business.city,
-								state: business.state,
-								zipCode: business.postal_code,
-								category: business.categories.category,
-								rating: business.stars,
+								address: business.location.display_address[0],
+								city: business.location.display_address[1],
+								state: business.location.display_address[2],
+								zipCode: business.location.zip_code,
+								distance: business.distance,
+								category: business.categories[0].title,
+								rating: business.rating,
 								reviewCount: business.review_count,
 
 							}

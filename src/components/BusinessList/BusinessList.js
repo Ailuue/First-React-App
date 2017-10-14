@@ -19,7 +19,7 @@ export default class BusinessList extends React.Component {
  					return <Business key={business.id} business={business} />;
  				}) : console.log("failed")
  			}
-    		}
+    		
 			</div>
     	);
   }

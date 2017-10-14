@@ -6,20 +6,6 @@ import BusinessList from './components/BusinessList/BusinessList.js';
 import SearchBar from './components/SearchBar/SearchBar.js'
 import { Yelp } from './util/Yelp.js';
 
-// let business = {
-//   imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
-//   name: 'MarginOtto Pizzeria',
-//   address: '1010 Paddington Way',
-//   city: 'Flavortown',
-//   state: 'NY',
-//   zipCode: '10101',
-//   category: 'Italian',
-//   rating: 4.5,
-//   reviewCount: 90,
-//   distance: 3
-// };
-
-// let businesses = [business, business, business, business, business, business]
 
 /*
 Main component in order to bring the app together.
@@ -42,7 +28,6 @@ export default class App extends Component {
   			this.setState({
   				businesses: businesses
   			});
-  			console.log('set');
   		})
   }
 
