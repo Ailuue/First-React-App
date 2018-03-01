@@ -11,6 +11,8 @@ passing it to Business.js
 
 export default class BusinessList extends React.Component {
   render() {
+    if (this.props.businesses.length !== 0) {
+    	console.log(this.props.businesses);
     return (
     		<div className="BusinessList">
     		{
@@ -22,6 +24,12 @@ export default class BusinessList extends React.Component {
     		
 			</div>
     	);
+}
+	else {
+		//return <div className="BusinessList"><p>No Results</p></div>
+		return <div>No Results</div>;
+		console.log('hi')
+	}
   }
 }
 
